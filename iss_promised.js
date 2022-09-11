@@ -11,7 +11,7 @@ const fetchCoordsByIP = function(body) {
 
 const fetchISSFlyOverTimes = function(body) {
   const { latitude, longitude } = JSON.parse(body);
-  const url = `http://api.open-notify.org/iss-pass.json?lat=${latitude}&lon=${longitude}`;
+  const url = `https://iss-pass.herokuapp.com/json/?lat=${latitude}&lon=${longitude}`;
   return request(url);
 };
 
